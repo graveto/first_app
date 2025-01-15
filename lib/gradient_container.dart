@@ -10,6 +10,10 @@ class GradientContainer extends StatelessWidget {
     super.key,
   });
 
+  void rollDice() {
+    print('Rolling the dice...');
+  }
+
   final Color startColor;
   final Color endColor;
   final Alignment startAlignment;
@@ -28,8 +32,20 @@ class GradientContainer extends StatelessWidget {
           end: endAlignment,
         ),
       ),
-      child: const Center(
-        child: StyledText('Hello Worlds!'),
+      child: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(
+              'assets/images/dice-1.png',
+              width: 200,
+            ),
+            TextButton(
+              onPressed: rollDice,
+              child: const StyledText('Roll Dice'),
+            ),
+          ],
+        ),
       ),
     );
   }
