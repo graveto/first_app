@@ -2,11 +2,6 @@ import 'package:first_app/styled_text.dart';
 import 'package:flutter/material.dart';
 
 class GradientContainer extends StatelessWidget {
-  final Color startColor;
-  final Color endColor;
-  final Alignment startAlignment;
-  final Alignment endAlignment;
-
   const GradientContainer(
     this.startColor,
     this.endColor,
@@ -14,6 +9,11 @@ class GradientContainer extends StatelessWidget {
     this.endAlignment, {
     super.key,
   });
+
+  final Color startColor;
+  final Color endColor;
+  final Alignment startAlignment;
+  final Alignment endAlignment;
 
   @override
   Widget build(BuildContext context) {
